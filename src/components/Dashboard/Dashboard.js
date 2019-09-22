@@ -11,14 +11,14 @@ export default class Dashboard extends Component {
   state = {
     transactions: [],
     balance: 0,
-    inputValue: 0,
+    inputValue: '',
   };
 
   handleSubmit = event => {
     const newTransaction = {
       id: shortid.generate(),
       type: event.target.name,
-      amount: this.state.inputValue,
+      amount: Number(this.state.inputValue),
       date: new Date().toLocaleString('en-US'),
     };
 
@@ -45,14 +45,17 @@ export default class Dashboard extends Component {
           : Math.round(
               parseFloat(state.balance - newTransaction.amount) * 100,
             ) / 100,
-      inputValue: 0,
+      inputValue: '',
     }));
   };
 
+  // /^\d*[.]?\d*$/
   handleInputChange = event => {
-    this.setState({
-      inputValue: Number(event.target.value),
-    });
+    if (/^\d*[.]?\d{0,2}$/.test(event.target.value)) {
+      this.setState({
+        inputValue: event.target.value,
+      });
+    }
   };
 
   render() {

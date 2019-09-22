@@ -7,7 +7,7 @@ const Controls = ({ onSubmitTransaction, onChange, inputValue }) => {
     <section className={styles.controls}>
       <input
         onChange={onChange}
-        type="number"
+        type="text"
         placeholder="Enter transaction amount..."
         className={styles.input}
         value={inputValue}
@@ -35,7 +35,7 @@ const Controls = ({ onSubmitTransaction, onChange, inputValue }) => {
 Controls.propTypes = {
   onSubmitTransaction: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  inputValue: PropTypes.number.isRequired,
+  inputValue: PropTypes.string.isRequired,
 };
 
 export default Controls;
