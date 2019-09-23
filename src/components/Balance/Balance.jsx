@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Balance.module.css';
+import styles from './balance.module.css';
 
 const Balance = ({ balance, expenses, incomes }) => {
   return (

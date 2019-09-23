@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import shortid from 'shortid';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import styles from './Dashboard.module.css';
+import styles from './dashboard.module.css';
 import Controls from '../Controls/Controls';
 import Balance from '../Balance/Balance';
 import TransactionHistory from '../TransactionHistory/TransactionHistory';

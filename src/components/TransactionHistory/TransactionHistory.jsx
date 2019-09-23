@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './TransactionHistory.module.css';
+import styles from './transactionHistory.module.css';
 
 const TransactionHistory = ({ transactions }) => {
   const tableItems = transactions.map(({ id, type, amount, date }) => (
